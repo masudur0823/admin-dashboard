@@ -178,25 +178,40 @@ table {
 }
 
 th {
-  border: 1px solid #E6E5E5;
   font-weight: 400;
   font-size: 16px;
   color: #000000;
 }
 
 th, td {
-  padding: 8px;
+  padding: 10px;
   text-align: left;
 }
 
 td {
-  border-left: 1px solid #E6E5E5;
-  border-right: 1px solid #E6E5E5;
+  /* border-left: 1px solid #E6E5E5; */
+  /* border-right: 1px solid #E6E5E5; */
   border-bottom: 1px solid #E6E5E5;
   font-weight: 300;
   font-size: 16px;
   color: #000000;
+  padding: 20px 10px;
+}
 
+th:first-child {
+  border-left: 1px solid #E6E5E5;
+}
+
+th:last-child {
+  border-right: 1px solid #E6E5E5;
+}
+
+td:first-child {
+  border-left: 1px solid #E6E5E5;
+}
+
+td:last-child {
+  border-right: 1px solid #E6E5E5;
 }
 
 tr:first-child {
@@ -207,13 +222,18 @@ tr:hover {
   background-color: #FAFAFA;
 }
 
+.table_img{
+  width: 80px;
+  height: 60px;
+  object-fit: contain;
+}
 /* table end */
 
 /* checkbox start */
 .check_container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 20px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -235,17 +255,18 @@ tr:hover {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E6E5E5;
 }
 
-.check_container:hover input ~ .checkmark {
-  background-color: #ccc;
+.check_container:hover input~.checkmark {
+  background-color: rgba(46, 184, 196, 0.295);
 }
 
-.check_container input:checked ~ .checkmark {
-  background-color: #2196F3;
+.check_container input:checked~.checkmark {
+  background-color: #2EB7C4;
 }
 
 .check_container .checkmark:after {
@@ -254,13 +275,13 @@ tr:hover {
   display: none;
 }
 
-.check_container input:checked ~ .checkmark:after {
+.check_container input:checked~.checkmark:after {
   display: block;
 }
 
 .check_container .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 7px;
+  top: 3px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -269,4 +290,14 @@ tr:hover {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 /* checkbox end */
+.delete{
+  color: #FF0A0A;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.delete::before{
+  content: url("./images/trash.svg");
+  margin-right: 5px;
+}
