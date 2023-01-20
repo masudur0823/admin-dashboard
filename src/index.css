@@ -171,6 +171,44 @@ input[type="date"] {
 
 /* filter  */
 
+/* table start */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #E6E5E5;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  border-left: 1px solid #E6E5E5;
+  border-right: 1px solid #E6E5E5;
+  border-bottom: 1px solid #E6E5E5;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000000;
+
+}
+
+tr:first-child {
+  background-color: #FAFAFA;
+}
+
+tr:hover {
+  background-color: #FAFAFA;
+}
+
+/* table end */
+
 
 
 /* input[type="date"]::-webkit-calendar-picker-indicator {
