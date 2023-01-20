@@ -41,7 +41,7 @@ select {
 .dashboard_main .child:nth-of-type(1) {
   background: #142038;
   padding: 40px;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -172,23 +172,23 @@ input[type="date"] {
 /* filter  */
 
 /* table start */
-table {
+.table {
   border-collapse: collapse;
   width: 100%;
 }
 
-th {
+.table th {
   font-weight: 400;
   font-size: 16px;
   color: #000000;
 }
 
-th, td {
+.table th, td {
   padding: 10px;
   text-align: left;
 }
 
-td {
+।.table td {
   /* border-left: 1px solid #E6E5E5; */
   /* border-right: 1px solid #E6E5E5; */
   border-bottom: 1px solid #E6E5E5;
@@ -198,36 +198,35 @@ td {
   padding: 20px 10px;
 }
 
-th:first-child {
+.table th:first-child {
   border-left: 1px solid #E6E5E5;
 }
 
-th:last-child {
+.table th:last-child {
   border-right: 1px solid #E6E5E5;
 }
 
-td:first-child {
+.table td:first-child {
   border-left: 1px solid #E6E5E5;
 }
 
-td:last-child {
+.table td:last-child {
   border-right: 1px solid #E6E5E5;
 }
 
-tr:first-child {
+.table tr:first-child {
   background-color: #FAFAFA;
 }
 
-tr:hover {
+.table tr:hover {
   background-color: #FAFAFA;
 }
 
-.table_img{
+.table_img {
   width: 80px;
   height: 60px;
-  object-fit: contain;
+  object-fit: cover;
 }
-/* table end */
 
 /* checkbox start */
 .check_container {
@@ -292,12 +291,77 @@ tr:hover {
 }
 
 /* checkbox end */
-.delete{
+
+.delete {
   color: #FF0A0A;
   text-decoration: underline;
   cursor: pointer;
 }
-.delete::before{
+
+.delete::before {
   content: url("./images/trash.svg");
   margin-right: 5px;
 }
+
+/* table end */
+
+
+
+
+/* pagination start*/
+/* ------------------------- */
+.pagination_main {
+  margin-top: 50px;
+}
+
+.pagination_main button {
+  background: #FFFFFF;
+  border: 1px solid #E6E5E5;
+  width: 40px;
+  height: 40px;
+}
+
+.pagination_main p {
+  font-weight: 300;
+  font-size: 14px;
+  color: #656565;
+}
+
+.pagination_main select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  background-image: url("./images/arrow-down-black.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 48%;
+  padding: 10px;
+  width: 70px;
+  height: 40px;
+  border: 1px solid #E6E5E5;
+}
+
+/* ------------------------- */
+/* pagination end*/
+
+/* modal start */
+.modal_main{
+  position: relative;
+}
+.modal_main table{
+  width: 100%;
+}
+.modal_main table th {
+  font-weight: 300;
+  font-size: 16px;
+  color: #656565;
+}
+
+.modal_main .close_icon{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+/* modal end */
